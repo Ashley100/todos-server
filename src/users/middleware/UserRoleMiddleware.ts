@@ -15,7 +15,7 @@ export default function UserRoleMiddleware (roles: Array<string>) {
 
             let user = await UserSchema.findOne({ _id: "605612b1595c532f2cb8ecf5" });
 
-            console.log("user", user);
+            console.log("user log", user);
 
             next();
 
