@@ -5,8 +5,12 @@
   "engines": { "node": "14.16.0" },
   "main": "src/index.ts",
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "dev": "nodemon -x ts-node src/index.ts",
+    "build-ts": "tsc",
+    "postinstall": "npm run build-ts",
+    "start": "npm run serve",
+    "serve": "node dist/index.js",
+    "watch-node": "nodemon dist/index.js",
+    "watch-ts": "tsc --watch",
     "push": "(git add .) & (git commit -m 'commit') & git push todos production"
   },
   "author": "",
